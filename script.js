@@ -4,7 +4,11 @@
 let xp = localStorage.getItem("xp")
     ? parseInt(localStorage.getItem("xp"))
     : 0;
-
+const levelRequirements = {
+    "Foundations": 0,
+    "Networking": 50,
+    "Web Security": 120
+};
 /* ===============================
    تحديث شريط التقدم
 ================================ */
@@ -29,15 +33,26 @@ function showLevels() {
             content.innerHTML = "<h2>Choose Level</h2>";
 
             Object.keys(data).forEach(level => {
+                const requiredXP = levelRequirements[level] || 0;
+                const locked = xp < requiredXP;
+
                 content.innerHTML += `
-                    <div class="card" onclick="showLessons('${level}')">
+                    <div class="card"
+                        style="opacity:${locked ? 0.4 : 1}"
+                        onclick="${
+                            locked
+                                ? `alert('🔒 هذا المستوى يتطلب ${requiredXP} XP')`
+                                : `showLessons('${level}')`
+                        }">
                         <h3>${level}</h3>
+                        ${locked ? `<p>🔒 Requires ${requiredXP} XP</p>` : ""}
                     </div>
                 `;
             });
         });
 }
 
+showLevels();
 /* ===============================
    عرض الدروس داخل مستوى
 ================================ */
