@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>CyberFire | الأمن السيبراني</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0d1117">
+    <link rel="icon" href="icon.png">
+    <meta name="theme-color" content="#00aaff">
 </head>
+
 <body>
 
 <header>
     <h1>🔥 CyberFire 🔥</h1>
     <p>منصة تعليم الأمن السيبراني من الصفر إلى الاحتراف</p>
+
     <div id="progress-container">
-    <div id="progress-bar"></div>
-</div>
+        <div id="progress-bar"></div>
+    </div>
 </header>
 
 <nav>
-    <button onclick="showHome()">الرئيسية</button>
-    <button onclick="showLessons()">الدروس</button>
-    <button onclick="showChallenges()">التحديات</button>
-    <button onclick="showAbout()">من نحن</button>
-    <button onclick="showQuiz()">الاختبار</button>
-    <button onclick="showRoadmap()">Roadmap</button>
-    <button onclick="showBadges()">Badges</button>
-    <button onclick="showTerminal()">Terminal</button>
+    <button onclick="showLevels()">المستويات</button>
 </nav>
 
-<section id="content"></section>
-
+<!-- ⚠️ عنصر واحد فقط -->
 <section id="content">
-    <h2>مرحبا بك أيها الهاكر الأخلاقي 😈</h2>
+    <h2>مرحبًا بك أيها الهاكر الأخلاقي 😈</h2>
     <p>
         هنا ستتعلم:
         <br>✔ أساسيات الأمن السيبراني  
+        <br>✔ الشبكات Networking  
         <br>✔ اختبار الاختراق  
         <br>✔ حماية الأنظمة  
     </p>
@@ -42,4 +45,4 @@
 
 <script src="script.js"></script>
 </body>
-</html>
+        </html>
