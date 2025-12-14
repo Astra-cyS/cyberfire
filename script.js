@@ -48,13 +48,13 @@ function showLessons(level) {
             const content = document.getElementById("content");
             content.innerHTML = `<h2>${level}</h2>`;
 
-            data[level].forEach(lesson => {
-                content.innerHTML += `
-                    <div class="card" onclick="showLesson('${level}', ${lesson.id})">
-                        <p>${lesson.title}</p>
-                    </div>
-                `;
-            });
+            data[level].forEach((lesson, index) => {
+    content.innerHTML += `
+        <div class="card" onclick="showLesson('${level}', ${index})">
+            <p>${lesson.title}</p>
+        </div>
+    `;
+});
 
             content.innerHTML += `
                 <button onclick="showLevelQuiz('${level}')">
@@ -71,7 +71,7 @@ function showLesson(level, lessonId) {
     fetch("lessons.json")
         .then(res => res.json())
         .then(data => {
-            const lesson = data[level].find(l => l.id === lessonId);
+            const lesson = data[level][lessonId];
             const content = document.getElementById("content");
 
             content.innerHTML = `
