@@ -2,8 +2,8 @@
   "Foundations": [
     {
       "title": "Cyber Security Introduction",
-      "image": "assets/images/icon.png",
-      "content": "الأمن السيبراني هو علم حماية الأنظمة والشبكات والمعلومات من الهجمات الرقمية والاختراقات. هذا الدرس مقدمة أساسية."
+      "image": "icon.png",
+      "content": "الأمن السيبراني هو علم حماية الأنظمة..."
     }
   ]
-} 
+}
