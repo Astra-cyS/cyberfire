@@ -1,102 +1,204 @@
 {
-  "Foundations": [
-    {
-      "title": "Introduction to Cyber Security",
-      "image": "images/intro.png",
-      "content": {
-        "description": "الأمن السيبراني هو مجال شامل يهتم بحماية الأنظمة الحاسوبية والشبكات والبيانات من الهجمات الرقمية. مع تطور الإنترنت واعتماد العالم على التكنولوجيا، أصبحت الهجمات السيبرانية أكثر تعقيدًا وخطورة.\n\nيشمل الأمن السيبراني حماية الأجهزة، الشبكات، البرمجيات، والبيانات من التهديدات مثل الاختراق، السرقة، التخريب، والتجسس.",
+  "Foundations": {
+    "description": "الأساس النظري للأمن السيبراني",
+    "lessons": [
+      {
+        "title": "Introduction to Cyber Security",
+        "image": "intro.png",
+        "content": "الأمن السيبراني هو علم وتقنيات تهدف إلى حماية الأنظمة الحاسوبية والشبكات والبيانات من الهجمات الرقمية. يشمل ذلك حماية المعلومات من السرقة، التلاعب، التخريب، أو الوصول غير المصرح به.\n\nمع تطور التكنولوجيا واعتماد العالم على الإنترنت، أصبح الأمن السيبراني عنصرًا أساسيًا في حياة الأفراد، الشركات، والحكومات.",
         "examples": [
-          "اختراق حسابات التواصل الاجتماعي",
-          "سرقة بيانات البطاقات البنكية",
-          "تعطيل مواقع حكومية بهجمات DDoS"
-        ],
-        "scenario": "تخيل شركة تمتلك آلاف العملاء، تم اختراق خادمها وسرقة بيانات المستخدمين. هذا يؤدي إلى خسائر مالية، مشاكل قانونية، وفقدان الثقة."
+          "حماية الحسابات الشخصية",
+          "تأمين المواقع الإلكترونية",
+          "منع سرقة البيانات البنكية"
+        ]
+      },
+      {
+        "title": "CIA Triad",
+        "image": "cia.png",
+        "content": "نموذج CIA هو الأساس النظري للأمن السيبراني ويتكون من السرية (Confidentiality)، السلامة (Integrity)، والتوافر (Availability). أي نظام آمن يجب أن يحقق هذه العناصر الثلاثة.",
+        "examples": [
+          "تشفير البيانات = Confidentiality",
+          "منع التعديل = Integrity",
+          "استمرارية الخدمة = Availability"
+        ]
+      },
+      {
+        "title": "Risk, Threat, Vulnerability",
+        "image": "risk.png",
+        "content": "التهديد هو الخطر المحتمل، الثغرة هي نقطة الضعف، والمخاطرة هي احتمال استغلال التهديد للثغرة.",
+        "examples": [
+          "ثغرة بدون تهديد = خطر منخفض",
+          "تهديد مع ثغرة = خطر مرتفع"
+        ]
       }
-    },
+    ]
+  },
 
-    {
-      "title": "Why Cyber Security Is Important",
-      "image": "images/importance.png",
-      "content": {
-        "description": "تكمن أهمية الأمن السيبراني في حماية المعلومات الحساسة للأفراد والمؤسسات. أي اختراق بسيط قد يؤدي إلى خسائر مالية ضخمة أو تهديد الأمن الوطني.\n\nمع زيادة الهجمات الإلكترونية، أصبح الاستثمار في الأمن السيبراني ضرورة وليس خيارًا.",
+  "Networking": {
+    "description": "أساسيات الشبكات للمختصين في الأمن",
+    "lessons": [
+      {
+        "title": "Networking Basics",
+        "image": "networking.png",
+        "content": "الشبكات هي ربط عدة أجهزة لتبادل البيانات. فهم الشبكات ضروري لأي مختص أمن سيبراني.",
         "examples": [
-          "اختراق بنك وسرقة ملايين الدولارات",
-          "تسريب بيانات مستخدمي منصة كبيرة",
-          "تعطيل مستشفيات بسبب هجمات فدية"
-        ],
-        "scenario": "هجوم فدية يصيب مستشفى، يتم تشفير جميع الأجهزة ولا يمكن إنقاذ المرضى إلا بعد دفع المال."
+          "LAN",
+          "WAN",
+          "Internet"
+        ]
+      },
+      {
+        "title": "OSI Model",
+        "image": "osi.png",
+        "content": "نموذج OSI يشرح انتقال البيانات عبر 7 طبقات، ويُستخدم لفهم الهجمات والدفاع.",
+        "examples": [
+          "Layer 3: IP",
+          "Layer 7: HTTP"
+        ]
+      },
+      {
+        "title": "Common Network Attacks",
+        "image": "net_attacks.png",
+        "content": "الهجمات الشبكية تستهدف البنية التحتية للاتصال.",
+        "examples": [
+          "ARP Spoofing",
+          "DNS Poisoning",
+          "Packet Sniffing"
+        ]
       }
-    },
+    ]
+  },
 
-    {
-      "title": "Who Is a Hacker?",
-      "image": "images/hacker.png",
-      "content": {
-        "description": "الهاكر هو شخص يمتلك مهارات تقنية عالية لفهم الأنظمة والشبكات. ليس كل هاكر مجرم، فهناك هاكر أخلاقي يعمل على حماية الأنظمة.\n\nالمشكلة ليست في المعرفة، بل في كيفية استخدامها.",
+  "WebSecurity": {
+    "description": "أمن تطبيقات الويب",
+    "lessons": [
+      {
+        "title": "Web Security Basics",
+        "image": "web.png",
+        "content": "أمن الويب يركز على حماية المواقع والتطبيقات من الهجمات الشائعة.",
         "examples": [
-          "هاكر أخلاقي يختبر موقع شركة",
-          "هاكر خبيث يسرق بيانات",
-          "باحث أمني يكتشف ثغرة"
-        ],
-        "scenario": "شركة توظف هاكرًا أخلاقيًا لاكتشاف الثغرات قبل استغلالها من المهاجمين."
+          "Login Protection",
+          "Session Security"
+        ]
+      },
+      {
+        "title": "SQL Injection",
+        "image": "sql.png",
+        "content": "هجوم يسمح بتنفيذ أوامر SQL عبر مدخلات غير محمية.",
+        "examples": [
+          "Bypass Login",
+          "Dump Database"
+        ]
+      },
+      {
+        "title": "XSS",
+        "image": "xss.png",
+        "content": "هجوم يسمح بحقن JavaScript خبيث داخل صفحات الويب.",
+        "examples": [
+          "Stealing Cookies",
+          "Session Hijacking"
+        ]
       }
-    },
+    ]
+  },
 
-    {
-      "title": "Types of Hackers",
-      "image": "images/types.png",
-      "content": {
-        "description": "ينقسم الهاكرز إلى عدة أنواع حسب نواياهم وأهدافهم. هذا التقسيم يساعد على فهم عالم الاختراق بشكل أفضل.",
+  "SystemSecurity": {
+    "description": "أمن أنظمة التشغيل",
+    "lessons": [
+      {
+        "title": "Operating System Security",
+        "image": "os.png",
+        "content": "أنظمة التشغيل هي الهدف الأول للمهاجمين، وتأمينها أمر أساسي.",
         "examples": [
-          "White Hat: هاكر أخلاقي",
-          "Black Hat: هاكر إجرامي",
-          "Grey Hat: بين الاثنين"
-        ],
-        "scenario": "هاكر Grey Hat يكتشف ثغرة ويبلغ عنها بعد استغلالها جزئيًا."
+          "User Privileges",
+          "Patch Management"
+        ]
+      },
+      {
+        "title": "Malware Types",
+        "image": "malware.png",
+        "content": "البرمجيات الخبيثة تهدف إلى التخريب أو التجسس.",
+        "examples": [
+          "Virus",
+          "Trojan",
+          "Ransomware"
+        ]
       }
-    },
+    ]
+  },
 
-    {
-      "title": "CIA Triad",
-      "image": "images/cia.png",
-      "content": {
-        "description": "نموذج CIA Triad هو حجر الأساس في الأمن السيبراني ويتكون من:\n\n- Confidentiality (السرية)\n- Integrity (السلامة)\n- Availability (التوافر)",
+  "Cryptography": {
+    "description": "التشفير وحماية البيانات",
+    "lessons": [
+      {
+        "title": "Cryptography Basics",
+        "image": "crypto.png",
+        "content": "التشفير يحمي البيانات من الوصول غير المصرح به.",
         "examples": [
-          "تشفير البيانات للحفاظ على السرية",
-          "منع التعديل غير المصرح به",
-          "ضمان توفر الموقع دائمًا"
-        ],
-        "scenario": "موقع حكومي يتعرض لهجوم حجب خدمة يؤدي لتعطله."
+          "Encryption",
+          "Hashing"
+        ]
+      },
+      {
+        "title": "Symmetric & Asymmetric Encryption",
+        "image": "encryption.png",
+        "content": "نوعان أساسيان من التشفير يُستخدمان في الأنظمة الحديثة.",
+        "examples": [
+          "AES",
+          "RSA"
+        ]
       }
-    },
+    ]
+  },
 
-    {
-      "title": "Common Cyber Threats",
-      "image": "images/threats.png",
-      "content": {
-        "description": "التهديدات السيبرانية متعددة ومتطورة، وتعتمد غالبًا على خداع المستخدم أو استغلال ثغرات تقنية.",
+  "EthicalHacking": {
+    "description": "الاختراق الأخلاقي",
+    "lessons": [
+      {
+        "title": "What is Ethical Hacking",
+        "image": "ethical.png",
+        "content": "الاختراق الأخلاقي يهدف لاكتشاف الثغرات قبل استغلالها.",
         "examples": [
-          "Malware",
-          "Phishing",
-          "DDoS",
-          "Social Engineering"
-        ],
-        "scenario": "موظف يفتح رابط تصيد يؤدي لاختراق شبكة الشركة."
+          "Penetration Testing",
+          "Bug Bounty"
+        ]
+      },
+      {
+        "title": "Hacking Methodology",
+        "image": "methodology.png",
+        "content": "كل هجوم يمر بمراحل محددة.",
+        "examples": [
+          "Reconnaissance",
+          "Exploitation",
+          "Post-Exploitation"
+        ]
       }
-    },
+    ]
+  },
 
-    {
-      "title": "Strong Passwords",
-      "image": "images/password.png",
-      "content": {
-        "description": "كلمات المرور القوية هي خط الدفاع الأول. يجب أن تكون معقدة وفريدة لكل خدمة.",
+  "Career": {
+    "description": "المسار المهني",
+    "lessons": [
+      {
+        "title": "Cyber Security Careers",
+        "image": "career.png",
+        "content": "مجال الأمن السيبراني يوفر وظائف متعددة برواتب قوية.",
         "examples": [
-          "استخدام رموز وأرقام",
-          "عدم إعادة استخدام كلمة المرور",
-          "استخدام Password Manager"
-        ],
-        "scenario": "اختراق حساب بسبب كلمة مرور ضعيفة."
+          "SOC Analyst",
+          "Pentester",
+          "Security Engineer"
+        ]
+      },
+      {
+        "title": "Building Your Skills",
+        "image": "skills.png",
+        "content": "التعلم المستمر والتطبيق العملي هما أساس النجاح.",
+        "examples": [
+          "CTFs",
+          "Home Labs",
+          "Certifications"
+        ]
       }
-    }
-  ]
-}
+    ]
+  }
+      } 
