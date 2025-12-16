@@ -88,9 +88,15 @@ function showLesson(level, lessonId) {
                 <p>${lesson.content}</p>
                 <button onclick="showLessons('${level}')">⬅ رجوع</button>
             `;
+
+            // ✅ تحقق: هل هذا آخر درس في Foundations؟
+            if (level === "Foundations" && lessonId === data[level].length - 1) {
+                localStorage.setItem("foundations_completed", "true");
+                console.log("Foundations completed ✅");
+            }
         })
         .catch(err => alert("خطأ في تحميل الدرس"));
-}
+                            }
 
 /* ===============================
    تشغيل التطبيق
